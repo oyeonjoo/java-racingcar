@@ -1,6 +1,8 @@
-package racingcar;
+package racingcar.io;
 
 import java.util.List;
+import racingcar.global.Message;
+import racingcar.entity.RacingCar;
 
 public class Prompt {
 
@@ -25,7 +27,7 @@ public class Prompt {
 
     public void printRoundResult(List<RacingCar> cars) {
         for (RacingCar car : cars) {
-            System.out.println(car);
+            System.out.println(car.display());
         }
         System.out.println();
     }

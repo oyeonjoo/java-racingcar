@@ -1,6 +1,10 @@
-package racingcar;
+package racingcar.config;
 
-public class ApplicationContext {
+import racingcar.io.Prompt;
+import racingcar.io.UserInput;
+import racingcar.service.Game;
+
+public class AppConfig {
 
     public static Prompt prompt() {
         return new Prompt();

@@ -1,9 +1,13 @@
-package racingcar;
+package racingcar.service;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import racingcar.global.Message;
+import racingcar.entity.RacingCar;
+import racingcar.io.Prompt;
+import racingcar.io.UserInput;
 
 public class Game {
 
