@@ -1,4 +1,4 @@
-package racingcar.io;
+package racingcar.service;
 
 import java.util.List;
 import racingcar.global.Message;

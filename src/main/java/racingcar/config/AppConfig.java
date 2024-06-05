@@ -1,10 +1,10 @@
 package racingcar.config;
 
 import racingcar.io.Prompt;
-import racingcar.io.UserInputService;
-import racingcar.service.Game;
+import racingcar.service.UserInputService;
+import racingcar.entity.Game;
 import racingcar.service.GameService;
-import racingcar.service.UserInput;
+import racingcar.io.UserInput;
 
 public class AppConfig {
 

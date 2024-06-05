@@ -1,4 +1,6 @@
-package racingcar.service;
+package racingcar.entity;
+
+import racingcar.service.GameService;
 
 public class Game {
 

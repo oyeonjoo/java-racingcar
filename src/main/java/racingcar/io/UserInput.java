@@ -1,10 +1,10 @@
-package racingcar.service;
+package racingcar.io;
 
 import camp.nextstep.edu.missionutils.Console;
 import java.util.ArrayList;
 import java.util.List;
 import racingcar.entity.RacingCar;
-import racingcar.io.UserInputService;
+import racingcar.service.UserInputService;
 
 public class UserInput {
 

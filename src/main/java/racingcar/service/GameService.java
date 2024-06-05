@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import racingcar.entity.RacingCar;
 import racingcar.io.Prompt;
+import racingcar.io.UserInput;
 
 public class GameService {
 

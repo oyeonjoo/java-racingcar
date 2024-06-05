@@ -1,7 +1,7 @@
 package racingcar;
 
 import racingcar.config.AppConfig;
-import racingcar.service.Game;
+import racingcar.entity.Game;
 
 public class Application {
 
