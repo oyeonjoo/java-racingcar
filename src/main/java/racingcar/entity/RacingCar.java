@@ -1,12 +1,12 @@
-package racingcar;
+package racingcar.entity;
 
 public class RacingCar {
 
-    private final String name;
     private int position;
+    private final CarInfo carInfo;
 
     public RacingCar(String name) {
-        this.name = name;
+        this.carInfo = new CarInfo(name);
         this.position = 0;
     }
 
@@ -17,15 +17,14 @@ public class RacingCar {
     }
 
     public String getName() {
-        return name;
+        return carInfo.name();
     }
 
     public int getPosition() {
         return position;
     }
 
-    @Override
-    public String toString() {
-        return name + " : " + "-".repeat(position);
+    public String display() {
+        return carInfo.name() + " : " + "-".repeat(position);
     }
 }
