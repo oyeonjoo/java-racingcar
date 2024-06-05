@@ -1,9 +1,9 @@
 package racingcar.service;
 
 import camp.nextstep.edu.missionutils.Randoms;
-import java.util.ArrayList;
 import java.util.List;
 import racingcar.entity.RacingCar;
+import racingcar.entity.Winners;
 import racingcar.io.Prompt;
 import racingcar.io.UserInput;
 
@@ -11,11 +11,13 @@ public class GameService {
 
     private final UserInput userInput;
     private final Prompt prompt;
+    private final Winners winners;
     private List<RacingCar> cars;
 
-    public GameService(UserInput userInput, Prompt prompt) {
+    public GameService(UserInput userInput, Prompt prompt, Winners winners) {
         this.userInput = userInput;
         this.prompt = prompt;
+        this.winners = winners;
     }
 
     public void startGame() {
@@ -23,40 +25,25 @@ public class GameService {
         cars = userInput.getInputCarName();
 
         prompt.attemptMessage();
-        prompt.printResult();
 
         race();
+
         prompt.printFinalWinnerName(getWinners());
     }
 
     public List<String> getWinners() {
-        List<String> winners = new ArrayList<>();
-        int maxPosition = 0;
 
         for (RacingCar car : cars) {
-            int currentPosition = car.getPosition();
-
-            if (currentPosition > maxPosition) {
-                maxPosition = currentPosition;
-                winners.clear();
-                winners.add(car.getName());
-                continue;
-            }
-            validateWinners(car, currentPosition, maxPosition, winners);
+            winners.updateWinners(car);
         }
-        return winners;
+        return winners.getWinnersNames();
     }
 
-    public void validateWinners(RacingCar car, int currentPosition, int maxPosition,
-        List<String> winners) {
-
-        if (currentPosition == maxPosition) {
-            winners.add(car.getName());
-        }
-    }
 
     public void race() {
         int attempts = Integer.parseInt(userInput.getAttemptNumber());
+
+        prompt.printResult();
 
         for (int i = 0; i < attempts; i++) {
             moveForward();

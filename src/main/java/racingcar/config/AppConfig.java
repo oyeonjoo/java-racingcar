@@ -1,10 +1,11 @@
 package racingcar.config;
 
-import racingcar.io.Prompt;
-import racingcar.service.UserInputService;
 import racingcar.entity.Game;
-import racingcar.service.GameService;
+import racingcar.entity.Winners;
+import racingcar.io.Prompt;
 import racingcar.io.UserInput;
+import racingcar.service.GameService;
+import racingcar.service.UserInputService;
 
 public class AppConfig {
 
@@ -12,16 +13,20 @@ public class AppConfig {
         return new Prompt();
     }
 
-    public static UserInputService inputService() {
-        return new UserInputService();
+    public static Winners winners() {
+        return new Winners();
     }
 
     public static UserInput userInput() {
         return new UserInput(inputService());
     }
 
+    public static UserInputService inputService() {
+        return new UserInputService();
+    }
+
     public static GameService service() {
-        return new GameService(userInput(), prompt());
+        return new GameService(userInput(), prompt(), winners());
     }
 
     public static Game getGame() {
