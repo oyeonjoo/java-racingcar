@@ -1,8 +1,8 @@
 package racingcar.io;
 
 import java.util.List;
-import racingcar.global.Message;
 import racingcar.entity.RacingCar;
+import racingcar.global.Message;
 
 public class Prompt {
 
