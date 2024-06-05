@@ -5,9 +5,6 @@ import racingcar.global.Message;
 
 public class UserInputService {
 
-    public UserInputService() {
-    }
-
     public void validateInputCarName(String racingCarName) {
         List<String> carNames = List.of(racingCarName.split(","));
 
