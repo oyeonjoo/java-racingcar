@@ -55,13 +55,6 @@ public class GameService {
         }
     }
 
-//    public void race(int attempts) {
-//        for (int i = 0; i < attempts; i++) {
-//            moveForward();
-//            prompt.printRoundResult(cars);
-//        }
-//    }
-
     public void race() {
         int attempts = Integer.parseInt(userInput.getAttemptNumber());
 
@@ -79,5 +72,4 @@ public class GameService {
             }
         }
     }
-
 }
